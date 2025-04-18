@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import UpdateUserButton from './components/UpdateUserButton';
+import UpdateUserFieldsButton from './components/UpdateUserFieldsButton';
+import DeleteUserButton from './components/DeleteUserButton';  // Importăm noua componentă
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Reqres API Demo</Text>  {/* Folosește Text pentru text */}
+      <UpdateUserButton />
+      <UpdateUserFieldsButton />
+      <DeleteUserButton />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    paddingTop: 80,
     alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 30,
   },
 });
