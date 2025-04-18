@@ -13,6 +13,7 @@ export default function App() {
       <DeleteUserButton />
     </SafeAreaView>
   );
+  
 }
 
 const styles = StyleSheet.create({
